@@ -1,36 +1,42 @@
-# 📊 Social Media Analytics Dashboard
+# Social Media Analytics Dashboard Project 
 
 An interactive, real-time data visualization dashboard designed for social media management teams. This dashboard provides comprehensive insights into engagement, reach, and performance across multiple social media platforms including Facebook, Instagram, Twitter, LinkedIn, and TikTok.
+<img width="1179" height="920" alt="image" src="https://github.com/user-attachments/assets/0adee9ad-0439-4534-aa85-6acb3e9aa180" />
 
-## ✨ Features
+<img width="1186" height="634" alt="image" src="https://github.com/user-attachments/assets/aef0cd39-a984-4015-b188-51ad8aa42144" />
 
-### 📈 Data Visualizations
+<img width="1192" height="943" alt="image" src="https://github.com/user-attachments/assets/eaae4758-d6a7-431c-8e6b-280a1a3eea0e" />
+
+
+## Features
+
+### Data Visualizations
 - **Engagement Over Time**: Line chart tracking likes, comments, and shares over a customizable time period
 - **Platform Distribution**: Doughnut chart showing follower distribution across platforms
 - **Reach vs Engagement**: Scatter plot analyzing the relationship between reach and engagement
 - **Post Performance**: Bar chart displaying average engagement metrics by platform
 - **Weekly Activity Heatmap**: Visual representation of activity patterns throughout the week
 
-### 🎛️ Interactive Features
+### Interactive Features
 - **Dynamic Filtering**: Filter data by platform, date range (7/30/90 days)
 - **Advanced Sorting**: Sort data by engagement, reach, or followers
 - **Live Data Refresh**: Manual refresh button to reload analytics data
 - **Responsive Table**: Sortable performance table with detailed metrics
 - **Dark Mode Toggle**: Seamless light/dark theme switching with persistent preferences
 
-### 📊 Key Performance Indicators (KPIs)
+### Key Performance Indicators (KPIs)
 - Total Followers with growth percentage
 - Total Reach with trend indicators
 - Engagement Rate with performance tracking
 - Total Posts with change metrics
 
-### 🎨 Design Features
+### Design Features
 - Modern, clean interface with smooth animations
 - Fully responsive design (desktop, tablet, mobile)
 - Color-coded visualizations for easy interpretation
 - Accessibility-focused UI components
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, or Edge)
@@ -54,7 +60,7 @@ An interactive, real-time data visualization dashboard designed for social media
 
 3. **That's it!** The dashboard is ready to use.
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### Viewing Analytics
 1. **Dashboard Overview**: Upon loading, you'll see comprehensive analytics for all platforms
@@ -78,7 +84,7 @@ An interactive, real-time data visualization dashboard designed for social media
 ### Refreshing Data
 - Click the "🔄 Refresh Data" button to reload analytics with current filters applied
 
-## 🏗️ Technical Architecture
+## Technical Architecture
 
 ### Technologies Used
 - **HTML5**: Semantic markup structure
@@ -88,13 +94,13 @@ An interactive, real-time data visualization dashboard designed for social media
 
 ### File Structure
 ```
-📁 SocialMediaDashboard/
+SocialMediaDashboard/
 │
-├── 📄 index.html          # Main HTML structure
-├── 🎨 styles.css          # Complete styling with dark mode support
-├── ⚙️ app.js              # Dashboard logic, charts, and interactivity
-├── 📊 data.js             # Mock API data generator
-└── 📖 README.md           # Documentation (this file)
+├── index.html          # Main HTML structure
+├── styles.css          # Complete styling with dark mode support
+├── app.js              # Dashboard logic, charts, and interactivity
+├── data.js             # Mock API data generator
+└── README.md           # Documentation (this file)
 ```
 
 ### Data Structure
@@ -105,7 +111,7 @@ The dashboard uses a mock JSON API that simulates real social media analytics da
 - Demographic information
 - Content insights and best posting times
 
-## 🎯 Use Cases
+## Use Cases
 
 ### Social Media Management Teams
 - **Performance Tracking**: Monitor engagement trends across all platforms
@@ -123,7 +129,7 @@ The dashboard uses a mock JSON API that simulates real social media analytics da
 - **Resource Allocation**: Determine where to focus social media efforts
 - **Performance Benchmarking**: Compare metrics across time periods
 
-## 🔧 Customization
+## Customization
 
 ### Connecting Real Data
 To connect your own data source, modify the `fetchAnalyticsData()` function in `data.js`:
@@ -150,7 +156,7 @@ async function fetchAnalyticsData(filters = {}) {
 - Layout adjustments: Update grid templates in relevant sections
 - Fonts: Change the `font-family` in the body selector
 
-## 🌐 Browser Compatibility
+## Browser Compatibility
 
 - ✅ Chrome 90+
 - ✅ Firefox 88+
@@ -161,19 +167,19 @@ async function fetchAnalyticsData(filters = {}) {
 ## 📱 Responsive Design
 
 The dashboard is fully responsive and optimized for:
-- 🖥️ **Desktop**: Full feature set with multi-column layouts
-- 💻 **Laptop**: Optimized grid layouts
-- 📱 **Tablet**: Adjusted charts and single-column layouts
-- 📱 **Mobile**: Streamlined interface with touch-friendly controls
+- **Desktop**: Full feature set with multi-column layouts
+- **Laptop**: Optimized grid layouts
+- **Tablet**: Adjusted charts and single-column layouts
+- **Mobile**: Streamlined interface with touch-friendly controls
 
-## 🔐 Data Privacy
+## Data Privacy
 
 - All data is processed client-side in your browser
 - No data is sent to external servers
 - Theme preferences are stored locally using localStorage
 - Mock data is generated randomly and doesn't represent real accounts
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Charts not displaying
 - Ensure Chart.js CDN is accessible (check internet connection)
@@ -187,7 +193,7 @@ The dashboard is fully responsive and optimized for:
 - Reduce date range for faster loading
 - Filter to specific platforms to reduce data processing
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 Potential features for future versions:
 - Export data to CSV/PDF
@@ -199,11 +205,11 @@ Potential features for future versions:
 - Scheduled report generation
 - AI-powered insights and recommendations
 
-## 📄 License
+## License
 
 This project is open source and available for educational and commercial use.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to:
 1. Fork the project
