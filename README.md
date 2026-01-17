@@ -164,7 +164,7 @@ async function fetchAnalyticsData(filters = {}) {
 - ✅ Edge 90+
 - ✅ Opera 76+
 
-## 📱 Responsive Design
+## Responsive Design
 
 The dashboard is fully responsive and optimized for:
 - **Desktop**: Full feature set with multi-column layouts
