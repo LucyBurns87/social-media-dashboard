@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>LB Social Media Analytics Dashboard</h1>
+                <div class="header-controls">
+                    <button id="darkModeToggle" class="btn-toggle" aria-label="Toggle dark mode">
+                        <span class="icon">☀️</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="platformFilter">Platform:</label>
+                    <select id="platformFilter" class="filter-select">
+                        <option value="all">All Platforms</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="TikTok">TikTok</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="dateRange">Date Range:</label>
+                    <select id="dateRange" class="filter-select">
+                        <option value="7">Last 7 Days</option>
+                        <option value="30" selected>Last 30 Days</option>
+                        <option value="90">Last 90 Days</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sortBy">Sort By:</label>
+                    <select id="sortBy" class="filter-select">
+                        <option value="engagement">Engagement</option>
+                        <option value="reach">Reach</option>
+                        <option value="followers">Followers</option>
+                    </select>
+                </div>
+
+                <button id="refreshData" class="btn-refresh">🔄 Refresh Data</button>
+            </div>
+        </section>
+
+        <!-- KPI Cards -->
+        <section class="kpi-section">
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon">👥</div>
+                    <div class="kpi-content">
+                        <h3>Total Followers</h3>
+                        <p class="kpi-value" id="totalFollowers">0</p>
+                        <span class="kpi-change positive" id="followersChange">+0%</span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-icon">👁️</div>
+                    <div class="kpi-content">
+                        <h3>Total Reach</h3>
+                        <p class="kpi-value" id="totalReach">0</p>
+                        <span class="kpi-change positive" id="reachChange">+0%</span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-icon">💬</div>
+                    <div class="kpi-content">
+                        <h3>Engagement Rate</h3>
+                        <p class="kpi-value" id="engagementRate">0%</p>
+                        <span class="kpi-change positive" id="engagementChange">+0%</span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-icon">📈</div>
+                    <div class="kpi-content">
+                        <h3>Total Posts</h3>
+                        <p class="kpi-value" id="totalPosts">0</p>
+                        <span class="kpi-change neutral" id="postsChange">+0%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <!-- Row 1: Main Performance Charts -->
+            <div class="chart-row">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h2>Engagement Over Time</h2>
+                    </div>
+                    <canvas id="engagementChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h2>Platform Distribution</h2>
+                    </div>
+                    <canvas id="platformChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Row 2: Detailed Analytics -->
+            <div class="chart-row">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h2>Reach vs Engagement</h2>
+                    </div>
+                    <canvas id="reachEngagementChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h2>Post Performance by Platform</h2>
+                    </div>
+                    <canvas id="postPerformanceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Row 3: Additional Metrics -->
+            <div class="chart-row">
+                <div class="chart-container chart-wide">
+                    <div class="chart-header">
+                        <h2>Weekly Activity Heatmap</h2>
+                    </div>
+                    <canvas id="heatmapChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Performance Table -->
+        <section class="table-section">
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>Platform Performance Details</h2>
+                </div>
+                <div class="table-wrapper">
+                    <table id="performanceTable">
+                        <thead>
+                            <tr>
+                                <th class="sortable" data-column="platform">Platform</th>
+                                <th class="sortable" data-column="followers">Followers</th>
+                                <th class="sortable" data-column="reach">Reach</th>
+                                <th class="sortable" data-column="engagement">Engagement</th>
+                                <th class="sortable" data-column="posts">Posts</th>
+                                <th class="sortable" data-column="engagementRate">Engagement Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <p>Social Media Analytics Dashboard © 2026 | Last Updated: <span id="lastUpdated"></span></p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
