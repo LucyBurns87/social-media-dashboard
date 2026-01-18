@@ -1,4 +1,4 @@
-// Mock Social Media Analytics Data
+// Mock  Data
 // This file simulates a JSON API response with comprehensive social media metrics
 
 const PLATFORMS = ['Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok'];
