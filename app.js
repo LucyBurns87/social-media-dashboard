@@ -1,4 +1,3 @@
-// Social Media Analytics Dashboard - Main Application
 // Handles data visualization, filtering, dark mode, and interactivity
 
 // Global state
