@@ -1,6 +1,7 @@
 # Social Media Analytics Dashboard Project 
 
 An interactive, real-time data visualization dashboard designed for social media management teams. This dashboard provides comprehensive insights into engagement, reach, and performance across multiple social media platforms including Facebook, Instagram, Twitter, LinkedIn, and TikTok.
+
 <img width="1179" height="920" alt="image" src="https://github.com/user-attachments/assets/0adee9ad-0439-4534-aa85-6acb3e9aa180" />
 
 <img width="1186" height="634" alt="image" src="https://github.com/user-attachments/assets/aef0cd39-a984-4015-b188-51ad8aa42144" />
